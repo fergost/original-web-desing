@@ -1,0 +1,78 @@
+#menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	z-index:3;
+	position: absolute;
+	bottom:0;
+	right:65px;
+	width:585px;
+}
+
+#menu li {
+	float: left;
+	position: relative;
+}
+
+#menu ul{
+    list-style:none;
+       }
+
+#menu span {
+	display: none;
+	position: absolute;
+}
+#menu a {
+	float: left;
+	display: block;
+	text-indent: -35900%;
+	outline: none;
+}
+#menu a:hover {
+	background-position: left bottom;
+}
+#menu a:hover span{
+	display: block;
+}
+
+#menu .creative {
+	width: 195px;
+	height:107px;
+	background: url(../images/team/bcrea.png) no-repeat;	
+}
+
+#menu .creative span {
+  width:448px;
+  height:355px;
+  background: url(../images/team/evatar.png) no-repeat;
+  left:-281px;
+  top:-393px;
+}
+
+#menu .web3d {
+	width: 195px;
+	height:107px;
+	background: url(../images/team/b3d.png) no-repeat;	
+}
+
+#menu .web3d span {
+  width:448px;
+  height:355px;
+  background: url(../images/team/mavatar.png) no-repeat;
+  left:-476px;
+  top:-393px;
+}
+
+#menu .program {
+	width: 195px;
+	height:107px;
+	background: url(../images/team/bprog.png) no-repeat;	
+}
+
+#menu .program span {
+  width:448px;
+  height:355px;
+  background: url(../images/team/avatar.png) no-repeat;
+  left:-671px;
+  top:-393px;
+}

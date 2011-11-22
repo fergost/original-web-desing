@@ -1,0 +1,32 @@
+body, html {
+	margin:0;
+	height:100%;
+	overflow:auto;
+}
+
+#wrapper {
+	margin:auto;
+	width:100%;
+	z-index:1;
+}
+
+#marco {
+	position:absolute;
+	width:1000px;
+	height:550px;
+	top:50%;
+	margin-top:-275px;
+	left:50%;
+	margin-left:-500px;
+	background-image:url('../images/black75.png');
+	background-repeat:repeat;
+}
+
+#fondo {
+	position:absolute;
+	height:550px;
+	width:1000px;
+	z-index:-1;
+	top:0;
+	left:0;
+}

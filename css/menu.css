@@ -1,0 +1,108 @@
+#menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	z-index:3;
+	position: absolute;
+	top:11.1em;
+	left:4.6em;
+	width:385px;
+}
+
+#menu ul{
+    list-style:none;
+       }
+
+#menu span {
+	display: none;
+	position: absolute;
+}
+#menu a {
+	display: block;
+	text-indent: -35900%;
+	outline: none;
+}
+#menu a:hover {
+	background-position: left bottom;
+}
+#menu a:hover span{
+	display: block;
+}
+
+#menu .contacto {
+	width: 309px;
+	height: 62px;
+	background: url(../images/menu/botoncontact.png) no-repeat;	
+}
+
+#menu .contacto span {
+  width: 526px;
+  height: 104px;
+  background: url(../images/menu/variacionb.png) no-repeat;
+  left:0.05em;
+  top:-8.6em;
+}
+
+#menu .web4u {
+	width: 309px;
+	height: 62px;
+	background: url(../images/menu/botonwebforyou.png) no-repeat;	
+}
+
+#menu .web4u span {
+  width: 526px;
+  height: 104px;
+  background: url(../images/menu/variaciondos.png) no-repeat;
+  left:0.05em;
+  top:-8.6em;
+}
+
+#menu .design {
+	width: 309px;
+	height: 62px;
+	background: url(../images/menu/botondteam.png) no-repeat;	
+}
+
+#menu .design span {
+  width: 526px;
+  height: 104px;
+  background: url(../images/menu/variacionuno.png) no-repeat;
+  left:0.05em;
+  top:-8.6em;
+}
+
+#menu .updown {
+	width: 309px;
+	height: 62px;
+	background: url(../images/menu/botonupdown.png) no-repeat;	
+}
+
+#menu .updown span {
+  width: 526px;
+  height: 104px;
+  background: url(../images/menu/variacionb.png) no-repeat;
+  left:0.05em;
+  top:-8.6em;
+}
+
+#menu .projects {
+	width: 309px;
+	height: 62px;
+	background: url(../images/menu/botonprojects.png) no-repeat;
+}
+
+#menu .projects span {
+  width: 526px;
+  height: 104px;
+  background: url(../images/menu/variaciondos.png) no-repeat;
+  left:0.05em;
+  top:-8.6em;
+}
+
+#menu .espacio {
+height:0.25em;
+}
+
+.nav audio {
+	display:none;
+}

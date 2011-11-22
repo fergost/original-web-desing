@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Author" content="Original Web Design" />
+<meta name="description" content="Original Web Design, empresa dedicada al desarrollo y creación de paginas web, animacion 3d y community manager" />
+<meta name="keywords" content="web,original,diseño,design,3d,community,manager,comercio,tienda,online,ecommerce,logo,logotipo,personalizada,boutique" />
+<meta name="robots" content="index, follow,all" />
+<meta name="classification" content="Global" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
+<meta name="revisit-after" content="15 days" />
+
+	<link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/template.css" type="text/css" />
+	<link rel="stylesheet" href="css/menu.css" type="text/css" />
+	
+<!-- lightbox -->
+	
+	<link href="css/gallery.css" rel="stylesheet" type="text/css">
+	<link href="css/lightbox.css" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.lightbox.js"></script>
+
+<!-- end lightbox -->
+
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+	    <script type='text/javascript' src='js/example.js'></script>
+	
+	<title>Original Web Design</title>
+	<link href="images/favicon.ico" rel="shortcut icon" />
+    
+    <style type="text/css">
+		<!--
+			body{
+			background: #ffffff;
+			cursor: url("cursor.cur"), help;
+			}
+		-->
+	</style> 
+
+</head>
+
+<body>
+
+
+    
+<div id="wrapper">        
+
+<div id="marco">
+
+	<img src="images/pagupdown.png" />
+
+<div id="menu">
+<ul class="nav">
+  <li><a href="#" class="contacto">Contacto<span></span></a>
+		<audio id="beep-two" controls preload>
+			<source src="sounds/sound01.mp3" controls type="audio/mpeg"></source>
+			<source src="sounds/sound01.ogg" controls type="audio/ogg"></source>
+		</audio>		
+  </li>
+  <li><div class="espacio"></div></li>
+  <li><a href="#" class="web4u">Web4U<span></span></a></li>
+  <li><div class="espacio"></div></li>
+  <li><a href="team.html" class="design">Design Team<span></span></a></li>
+  <li><div class="espacio"></div></li>
+  <li><a href="#" class="updown">Up and down<span></span></a></li>
+  <li><div class="espacio"></div></li>
+  <li><a href="#" class="projects">Projects<span></span></a></li>
+</ul>
+
+<!-- audio -->
+
+	<script>
+		$("#menu a")
+	  .each(function(i) {
+		if (i != 0) { 
+		  $("#beep-two")
+			.clone()
+			.attr("id", "beep-two" + i)
+			.appendTo($(this).parent()); 
+		}
+		$(this).data("beeper", i);
+	  })
+	  .mouseenter(function() {
+		$("#beep-two" + $(this).data("beeper"))[0].play();
+	  });
+		$("#beep-two").attr("id", "beep-two0");
+	</script>
+
+<!-- fin audio -->
+
+</div>	
+
+<div id="fondo">
+	<object>
+		<embed width="1000" height="550" wmode="opaque" quality="high" src="fla/nubes.swf" scale="exactfit">
+	</object>
+</div> <!-- fondo -->
+
+<div id="page-wrap">
+	<div class="widget widget-one rounded"></div>
+</div>
+
+<div id="gallery">
+	<a href="images/pagwellcome.png" class="gallery"></a>
+	
+	<script>
+		$(document).ready(function() {
+
+		$('#gallery a').lightBox({
+			txtImage: 'Photo',
+			overlayOpacity: .6,
+			overlayBgColor: '#000'
+		});
+
+		$('#gallery img').each(function() {
+			var imgFile = $(this).attr('src');
+			var preloadImage = new Image();
+		  var imgExt = /(\.\w{3,4}$)/;
+		  preloadImage.src = imgFile.replace(imgExt,'_h$1');
+				
+			$(this).hover(
+				function() {
+					$(this).attr('src', preloadImage.src);
+				},
+				function () {
+					$(this).attr('src', imgFile);
+				}
+			); // end hover
+		}); // end each
+
+		}); // end ready
+	</script>
+	
+</div>
+
+</div> <!-- marco -->
+</div> <!-- wrapper -->
+
+</body>
+</html>

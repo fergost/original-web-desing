@@ -1,0 +1,42 @@
+body, html {
+	margin:0;
+	padding:0;
+}
+
+#main {
+	width: 500px;
+    height: 250px;
+    left: 400px;
+    position: absolute;
+    top: 150px;    
+}
+
+#mainframe {
+	width:98%;
+}
+
+.iframe {
+position: absolute;
+height:100%;
+width:100%;
+border:0;
+}
+	
+.frametext {
+	text-decoration:none;
+	font-family:Arial,Verdana;
+	font-size:0.7em;
+	color:#080808;
+	text-align:justify;
+	padding-right:10px;
+}
+
+.enlaces {
+	text-decoration:none;
+	color:#bf2531;
+}
+
+.sinopsis {
+	text-decoration:none;
+	color:black;
+}

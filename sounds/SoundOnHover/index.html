@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8'>
+	
+	<title>Play Sound on :hover</title>
+	
+	<link rel='stylesheet' href='css/style.css'>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+</head>
+
+<body>
+  
+	<div id="page-wrap">
+	
+		<header><div class="inside">
+			<h1>Play Audio on :hover</h1>
+			
+			<p>We're going to use HTML5 here, no Flash. We'll need an audio element with both MP3 (WebKit, IE) and OGG (Firefox, Opera). </p>
+			
+			<pre><code>&lt;audio controls preload=&quot;auto&quot;&gt;
+	&lt;source src=&quot;audio/beep.mp3&quot; controls&gt;&lt;/source&gt;
+	&lt;source src=&quot;audio/beep.ogg&quot; controls&gt;&lt;/source&gt;
+	Your browser isn&#39;t invited for super fun audio time.
+&lt;/audio&gt;</code></pre>
+
+		<p>We're using jQuery in this demo to make selecting things and events easier, but the .play() function is native. You
+		probably wouldn't show the audio element, that's for demo purposes only, <strong>just remove the control attribute to not show anything.</strong></p>
+		</div></header>
+		
+		<section id="one"><div class="inside">
+		
+		<h2>One &lt;audio> for all menu items</h2>
+
+		<p>.play() won't force the audio clip to start over unless it's finished first, not very smooth.</p>
+		
+		<ul id="nav-one" class="nav">
+		   <li>
+		   	<a href="#">Home</a>
+		   	<audio id="beep-one" controls="controls" preload="auto">
+				<source src="audio/beep.mp3"></source>
+				<source src="audio/beep.ogg"></source>
+				Your browser isn't invited for super fun time.
+			</audio>
+			</li>
+		   <li><a href="#">About</a></li>
+		   <li><a href="#">Clients</a></li>
+		   <li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<script>var beepOne = $("#beep-one")[0];
+$("#nav-one a")
+	.mouseenter(function() {
+		beepOne.play();
+	});</script>
+		
+		</div></section>
+		
+		<section id="three"><div class="inside">
+		
+		<h2>One &lt;audio> for all menu items, with pause</h2>
+
+		<p>.pause() ing first should stop it and then play new sound but it actually makes it worse somehow. Sounds get chopped off but not restarted.</p>
+		
+		<ul id="nav-three" class="nav">
+		   <li>
+		   	<a href="#">Home</a>
+			<audio id="beep-three" controls preload="auto">
+				<source src="audio/beep.mp3" controls></source>
+				<source src="audio/beep.ogg" controls></source>
+				Your browser isn't invited for super fun time.
+			</audio>
+			</li>
+		   <li><a href="#">About</a></li>
+		   <li><a href="#">Clients</a></li>
+		   <li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<script>var beepThree = $("#beep-three")[0];
+$("#nav-three a")
+	.mouseenter(function() {
+		beepThree.pause();
+		beepThree.play();
+	});</script>
+		
+		</div></section>
+		
+		<section id="two"><div class="inside">
+		
+		<h2>Cloned &lt;audio>, one for each menu item</h2>
+		
+		<p>Smoothest but not perfect.</p>
+				
+		<ul id="nav-two" class="nav">
+		   <li>
+		   	<a href="#">Home</a>
+		   	<audio id="beep-two" controls preload="auto">
+				<source src="audio/beep.mp3" controls></source>
+				<source src="audio/beep.ogg" controls></source>
+				Your browser isn't invited for super fun time.
+			</audio>
+			</li>
+		   <li><a href="#">About</a></li>
+		   <li><a href="#">Clients</a></li>
+		   <li><a href="#">Contact Us</a></li>
+		</ul>
+		
+		<script>$("#nav-two a")
+  .each(function(i) {
+    if (i != 0) { 
+      $("#beep-two")
+        .clone()
+        .attr("id", "beep-two" + i)
+        .appendTo($(this).parent()); 
+    }
+    $(this).data("beeper", i);
+  })
+  .mouseenter(function() {
+    $("#beep-two" + $(this).data("beeper"))[0].play();
+  });
+$("#beep-two").attr("id", "beep-two0");</script>
+		
+		</div></section>
+		
+	</div>
+				
+</body>
+
+</html>

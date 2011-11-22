@@ -1,0 +1,42 @@
+body { 
+   -moz-opacity:.999; 
+}
+
+#gallery {
+	position: absolute;
+	top:29em;
+	left:52.8em;
+	width:120px;
+}
+
+#gallery a {		
+	display: block;
+	float: left;	
+	width: 120px;
+	text-indent: -35900%;
+	outline: none;
+}
+
+#gallery img {
+	display:block;
+}
+
+#gallery a.selected {
+	background-color: #000000;
+	outline:none;
+	
+}
+
+#gallery a:hover {
+	background-position: left bottom;
+}
+
+#gallery .gallery {
+	width:120px;
+	height:79px;
+	background: url(../images/welcome.png) no-repeat;	
+}
+
+a:focus {
+width:0px;height:0px;outline:0px;
+}
